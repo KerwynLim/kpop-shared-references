@@ -16,6 +16,20 @@
       "references": 4,
       "added": "2026-11-15",
       "contributor": "eggjai801"
+    },
+    {
+      "id": "803753fb1089637b",
+      "title": "AND2BLE",
+      "file": "packs/803753fb1089637b.sbmpack",
+      "sha256": "c1edc2df41a0109f860e807cf7a01b0e9173a2f71289b6de89ac78c78e183ff2",
+      "bytes": 1515788,
+      "groups": [
+        "AND2BLE"
+      ],
+      "members": 5,
+      "references": 56,
+      "added": "2026-11-15",
+      "contributor": "KerwynLim"
     }
   ]
 }
