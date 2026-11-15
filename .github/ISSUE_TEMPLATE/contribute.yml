@@ -1,0 +1,26 @@
+name: Contribute references
+description: Share reference faces from Sort by Member with everyone
+title: "Group name — what's in it"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        In **Sort by Member**: Settings → Shared references → **Contribute Your References…**
+        saves a `.zip`. Drag that file into the box below and press **Submit**.
+
+        A robot checks it within a few minutes (valid file, valid names, one face in each picture)
+        and adds it for everyone. Pictures without a face are left out.
+  - type: textarea
+    id: pack
+    attributes:
+      label: Your references (.zip)
+      description: Drag the .zip here. Up to 25 MB — if it's bigger, contribute one group at a time.
+    validations:
+      required: true
+  - type: checkboxes
+    id: ok
+    attributes:
+      label: Before you send
+      options:
+        - label: The faces are labelled with the right members, and I'm happy for these face crops to be public.
+          required: true
