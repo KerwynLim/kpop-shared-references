@@ -42,6 +42,7 @@ FORMAT = 1
 BAD_CHARS = set('/\\:*?"<>|') | {chr(i) for i in range(32)}
 RESERVED = {"CON", "PRN", "AUX", "NUL", *(f"COM{i}" for i in range(1, 10)),
             *(f"LPT{i}" for i in range(1, 10))}
+TEMPLATE_TITLE = "Group name — what's in it"   # the form's example title, left as is
 ATTACHMENT = re.compile(r"https://github\.com/(?:user-attachments/files/\d+/|[\w.-]+/[\w.-]+/files/\d+/)"
                         r"[^\s)\]>\"']+?\.zip")
 
@@ -225,7 +226,8 @@ def main() -> int:
             continue
         with zipfile.ZipFile(io.BytesIO(pack)) as z:
             groups = [g["name"] for g in json.loads(z.read("manifest.json"))["groups"]]
-        publish(pack, title, user, groups, counts)
+        name = title if title and title != TEMPLATE_TITLE else ", ".join(groups)[:100]
+        publish(pack, name, user, groups, counts)
         published += 1
         report.append(f"**{name}**: added — {counts[0]} group(s), {counts[1]} member(s), "
                       f"{counts[2]} face(s) ({', '.join(groups)}).\n" + "\n".join(notes))
