@@ -2,5 +2,20 @@
   "format": 1,
   "title": "K-pop shared references",
   "contribute_url": "https://github.com/KerwynLim/kpop-shared-references/issues/new?template=contribute.yml",
-  "packs": []
+  "packs": [
+    {
+      "id": "6145b63200f4415e",
+      "title": "Group name — what's in it",
+      "file": "packs/6145b63200f4415e.sbmpack",
+      "sha256": "ad6653ea6177829b9a556e91919d44812ea1a613a2dd76c44d00094d0aba87b9",
+      "bytes": 98630,
+      "groups": [
+        "LE SSERAFIM"
+      ],
+      "members": 1,
+      "references": 4,
+      "added": "2026-11-15",
+      "contributor": "eggjai801"
+    }
+  ]
 }
